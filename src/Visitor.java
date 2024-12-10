@@ -42,7 +42,6 @@ public class Visitor extends Person {
         this.membershipPoints = membershipPoints;
     }
 
-
     // Method to format the Visitor's data into a string
     public static String formatString(Visitor visitor) {
         // Using getters to access the Visitor's data
@@ -88,7 +87,6 @@ public class Visitor extends Person {
             return null;
         }
     }
-
 
     @Override
     public String toString() {

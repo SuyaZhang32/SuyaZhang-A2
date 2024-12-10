@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class AssignmentTwo {
-
+    // Create an instance of AssignmentTwo and call the methods of each task section in turn
     public static void main(String[] args) {
         AssignmentTwo assignmentTwo = new AssignmentTwo();
         assignmentTwo.partThree();
@@ -13,7 +13,7 @@ public class AssignmentTwo {
     }
 
     public void partThree(){
-
+        // Create an employee object
         Employee employee = new Employee(
                 "John Doe",         // name
                 30,                 // age
@@ -50,6 +50,7 @@ public class AssignmentTwo {
         // Print all Visitors in the Queue
         ride.printQueue();
     }
+
     public void partFourA(){
         Employee employee = new Employee(
                 "John Doe",         // name
@@ -92,6 +93,7 @@ public class AssignmentTwo {
         ride.printRideHistory();
 
     }
+
     public void partFourB(){
 
         Employee employee = new Employee(
@@ -185,6 +187,7 @@ public class AssignmentTwo {
         Visitor visitor5 = new Visitor("Eve", 22, "202 Birch St", "555-6789", "M005", "Silver", 100);
         Visitor visitor6 = new Visitor("David Clark", 50, "303 Elm Street", "555-3456", "MEM006", "VIP", 750);
 
+        // Add visitors to play history
         ride.addVisitorToHistory(visitor1);
         ride.addVisitorToHistory(visitor2);
         ride.addVisitorToHistory(visitor3);
@@ -192,8 +195,10 @@ public class AssignmentTwo {
         ride.addVisitorToHistory(visitor5);
         ride.addVisitorToHistory(visitor6);
 
+        // Export play history to CSV file
         ride.exportRideHistory("/Users/32hz./Desktop/SuyaZhang-A2/data/ride_history.csv");
     }
+
     public void partSeven(){
         Employee employee = new Employee(
                 "John Doe",         // name
@@ -206,7 +211,9 @@ public class AssignmentTwo {
         );
         // Create a new Ride object
         Ride ride = new Ride("Green Lantern Coaster",500,true,employee,2);
+        // Import play history from CSV file
         ride.importRideHistory("/Users/32hz./Desktop/SuyaZhang-A2/data/ride_history.csv");
+        // Print the number of visitors and details in the tour history
         ride.numberOfVisitors();
         ride.printRideHistory();
     }

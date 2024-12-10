@@ -6,6 +6,7 @@ public abstract class Person {
     private String phoneNumber;
 
     // Default constructor
+    // is used to create a Person object with no initialization properties
     public Person() {
     }
 
@@ -54,6 +55,7 @@ public abstract class Person {
     }
 
     // Optional: Override toString() method for better representation
+    // Provides a string representation of the Person object, showing information about all properties
     @Override
     public String toString() {
         return "Person{" +

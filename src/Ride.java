@@ -14,7 +14,6 @@ public class Ride implements RideInterface{
     // Tracks the number of cycles the ride has completed
     private int numOfCycles;
 
-
     // Queue to manage visitors
     private Queue<Visitor> visitorQueue = new LinkedList<>();
 
@@ -179,7 +178,7 @@ public class Ride implements RideInterface{
         }
     }
 
-
+    // Import ride history from the file
     public void importRideHistory(String filePath) {
         // Use try-with-resources to ensure BufferedReader is closed properly
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
