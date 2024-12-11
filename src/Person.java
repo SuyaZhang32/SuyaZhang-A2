@@ -12,6 +12,12 @@ public abstract class Person {
 
     // Parameterized constructor
     public Person(String name, int age, String address, String phoneNumber) {
+        if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
+        if (age <= 0) {
+            throw new IllegalArgumentException("Age must be greater than zero.");
+        }
         this.name = name;
         this.age = age;
         this.address = address;

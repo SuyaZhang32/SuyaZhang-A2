@@ -1,7 +1,9 @@
 public class Visitor extends Person {
     // Instance variables specific to Visitor
     private String membershipId;
+    // Type of membership
     private String membershipType;
+    // Points associated with the visitor's membership
     private int membershipPoints;
 
     // Default constructor
@@ -18,26 +20,32 @@ public class Visitor extends Person {
     }
 
     // Getters and setters for Employee variables
+    // Gets the membership ID of the visitor.
     public String getMembershipId() {
         return membershipId;
     }
 
+    // Sets the membership ID of the visitor.
     public void setMembershipId(String membershipId) {
         this.membershipId = membershipId;
     }
 
+    // Gets the membership type of the visitor.
     public String getMembershipType() {
         return membershipType;
     }
 
+    // Sets the membership type of the visitor.
     public void setMembershipType(String membershipType) {
         this.membershipType = membershipType;
     }
 
+    // Gets the membership points of the visitor.
     public int getMembershipPoints() {
         return membershipPoints;
     }
 
+    // Sets the membership points of the visitor.
     public void setMembershipPoints(int membershipPoints) {
         this.membershipPoints = membershipPoints;
     }
@@ -88,6 +96,7 @@ public class Visitor extends Person {
         }
     }
 
+//  Returns a string representation of the Visitor object, including membership details and the attributes inherited from the Person class.
     @Override
     public String toString() {
         return "Visitor{" +

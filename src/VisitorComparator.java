@@ -1,6 +1,7 @@
 import java.util.Comparator;
-
+// VisitorComparator is used to compare Visitor objects based on multiple attributes.
 public class VisitorComparator implements Comparator<Visitor> {
+    // Compares two Visitor objects based on membership points, name, and age.
     @Override
     public int compare(Visitor v1, Visitor v2) {
         // Compare by membershipPoints first
