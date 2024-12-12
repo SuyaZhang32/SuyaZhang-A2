@@ -43,7 +43,8 @@ public class Ride implements RideInterface{
     @Override
     public void addVisitorToQueue(Visitor visitor) {
         visitorQueue.offer(visitor);
-        System.out.println(visitor.getName() + " has joined the  queue for the " + name + ".");
+        System.out.println("----- Queue Update -----");
+        System.out.println(visitor.getName() + " has joined the queue for the \"" + name + "\".\n");
     }
 
     // Method to remove and return the next visitor from the queue
@@ -87,14 +88,16 @@ public class Ride implements RideInterface{
     @Override
     public int numberOfVisitors() {
         int count = rideHistory.size();
-        System.out.println("The number of visitors who have taken the " + name + " is: " + count);
+        System.out.println("\n----- Visitor Statistics -----");
+        System.out.println("The number of visitors who have taken the \"" + name + "\": " + count + "\n");
         return count;
     }
 
     // Method to print the details of all Visitors who have taken the Ride
     @Override
     public void printRideHistory() {
-        System.out.println("Visitors who have taken the " + name + ":");
+        System.out.println("\n----- Ride History -----");
+        System.out.println("Visitors who have taken the " + name + ":" );
         Iterator<Visitor> iterator = rideHistory.iterator();
         while (iterator.hasNext()) {
             Visitor visitor = iterator.next();
