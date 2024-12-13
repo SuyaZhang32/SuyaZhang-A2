@@ -186,16 +186,18 @@ public class Ride implements RideInterface{
         // Use try-with-resources to ensure BufferedReader is closed properly
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
+            int lineNumber = 0; // Record line number
             // Read the file line by line
             while ((line = reader.readLine()) != null) {
                 // Assuming there's a way to create a Visitor from a String
                 // This could be a constructor, a static factory method, or some other mechanism
+                lineNumber++;
                 Visitor visitor = Visitor.fromString(line);
                 if (visitor != null) {
                     // Add the visitor to the ride history
                     rideHistory.add(visitor);
                 } else {
-                    System.err.println("Failed to create a Visitor from the line: " + line);
+                    System.err.println("Failed to create a Visitor from line " + lineNumber + ": " + line);
                 }
             }
             System.out.println("Ride history successfully imported from " + filePath);
