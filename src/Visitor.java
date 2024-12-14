@@ -91,7 +91,7 @@ public class Visitor extends Person {
             return new Visitor(name, age, address, phoneNumber, membershipId, membershipType, membershipPoints);
         } catch (NumberFormatException e) {
             // Handle the case where age or membershipPoints is not a valid number
-            System.err.println("Error: One or more numeric fields in the input string are invalid.");
+            System.err.println("Error: Numeric fields are invalid in input: \" + visitorStr");
             return null;
         }
     }
